@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{% url 'todo delete' todo.id %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+        Are you sure you want to proceed
+        <input class="btn btn-danger" type="submit" value="Submit">
+    </form>
+{% endblock %}

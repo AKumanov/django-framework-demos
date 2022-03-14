@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url 'cbv index' %}">Back</a>
+    <h1>Tasks</h1>
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ todo.title}}</h5>
+    <p class="card-text">{{ todo.description }}</p>
+      <h5 class="card-text">{{ todo.urgency }}</h5>
+      <h5 class="card-text">{{ todo.category }}</h5>
+    <a href="{% url 'todo update' todo.pk %}" class="card-link">Update</a>
+    <a href="{% url 'todo delete' todo.pk %}" class="card-link">Delete</a>
+  </div>
+</div>
+{% endblock %}

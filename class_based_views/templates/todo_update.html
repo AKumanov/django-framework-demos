@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url 'cbv index' %}">Back</a>
+    <form action="{% url 'todo update' todo.pk %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+{% endblock %}

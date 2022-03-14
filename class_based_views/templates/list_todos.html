@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    {{ message }}
+    <h1>Tasks</h1>
+    <div>
+    <a href="{% url 'todo create' %}">Create</a>
+    </div>
+        <div class="todo-container">
+        {% for todo in todos %}
+        <div class="todo">
+            <h3 class="todo-title">{{ todo.title }}</h3>
+            <a href="{% url 'todo details' todo.pk %}">View</a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
