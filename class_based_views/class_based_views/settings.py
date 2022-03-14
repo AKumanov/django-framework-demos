@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'class_based_views.web',
+    'class_based_views.auth',
 ]
 
 MIDDLEWARE = [
