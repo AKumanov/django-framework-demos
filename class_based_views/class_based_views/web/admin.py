@@ -3,7 +3,7 @@ from .models import Todo, Category
 
 
 # Register your models here.
-# admin.site.register(Todo)
+# admin.site.register(T-odo)
 # admin.site.register(Category)
 
 @admin.register(Todo)
