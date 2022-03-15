@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import views as auth_views
+from . import forms
 from django.shortcuts import render
 
 # Create your views here.
@@ -12,6 +13,7 @@ class HomePageView(generic_views.TemplateView):
 
 
 class UserRegisterView(generic_views.CreateView):
+    # form_class = forms.UserRegistrationForm
     form_class = UserCreationForm
     template_name = 'register.html'
     success_url = reverse_lazy('index')
